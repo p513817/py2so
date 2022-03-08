@@ -22,9 +22,11 @@ $ python3 setup.py build_ext --inplace --src <src path> --dst <dst path>
 
 # DEMO
 * Build shared object from the python API (demo).
+    > The python API with shared objects ( out ) will be generated after this command.
     ```shell
     $ python3 setup.py build_ext --inplace --src demo --dst out
     ```
+    
 * Test the python api and shared object.
     ```shell
     # test the python file (.py)
