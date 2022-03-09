@@ -21,6 +21,7 @@ def get_args(args:list, key:str):
             return None
 
 args = sys.argv
+build_path = './build'
 
 # check basic argument
 for opt in ['build_ext', '--inplace']:
@@ -30,7 +31,6 @@ for opt in ['build_ext', '--inplace']:
 # parse custom option
 src, dst = [ get_args(args, opt) if get_args(args, opt)!=None else opt.replace('--','') for opt in ['--src', '--dst'] ]
 temp_dst = os.path.join( os.getcwd(), os.path.basename(dst) )
-build_path = './build'
 
 # check the source is exists
 if not os.path.exists(src):
