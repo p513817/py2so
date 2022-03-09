@@ -5,7 +5,7 @@ Package python API to dynamic shared objects
 1. Package the project to a new one but will not confuse the original one.
 2. The user could use the generated project in the same way as the python module, but could not see any details.
 3. Delete `pycache` and exclude `__init__.py` in order to generate a more concise structure.
-
+4. Backup the source file automatically ( the default is `./backup` ).
 # Prerequirement
 ```shell
 pip3 install Cython
@@ -13,12 +13,13 @@ pip3 install Cython
 
 # Help
 ```shell
-$ python3 setup.py build_ext --inplace --src <src path> --dst <dst path>
+$ python setup.py build_ext --inplace --src <the_source_path> [Options]
+
+[Options]
+--dst       if not provide the destination path, will backup and replace the original one.
+--backup    change the backup path, the default is './backup'
+--build     change the path of build folder, the default is './build'
 ```
-| argument   |   describe    
-| ---   |   --------
-| `--src`   |   the source path
-| `--dst`   |   the destination path
 
 # DEMO
 * Build shared object from the python API (demo).

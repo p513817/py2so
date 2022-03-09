@@ -34,8 +34,8 @@ def helper():
         "",
         "[Options]",
         "--dst       if not provide the destination path, will backup and replace the original one.",
-        "--backup    the backup path.",
-        "--build     the path of build folder, the default is './build'",
+        "--backup    change the backup path, the default is './backup'",
+        "--build     change the path of build folder, the default is './build'",
         "" ]
     [print(i) for i in info]
     sys.exit(1)
