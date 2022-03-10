@@ -1,4 +1,3 @@
-from ast import arg
 import sys, os, glob, shutil
 from distutils.core import setup
 from Cython.Build import cythonize
@@ -103,4 +102,3 @@ shutil.move(temp_dst, dst_path)
 
 # remove 
 [ shutil.rmtree(path) for path in [build_path, temp_dst] if os.path.exists(path) ]
-
