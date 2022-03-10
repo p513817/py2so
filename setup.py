@@ -63,7 +63,7 @@ build_path = os.path.normpath(get_args(args, '--build', './build') )
 
 # if the source is exists, clear pycahe folder
 if not os.path.exists(src_path):
-    raise Exception('\nCould not find the source path ({})'.format(src_path))                
+    raise Exception('Could not find the source path ({})'.format(src_path))                
 else:
     print('clear pycache')
     [ shutil.rmtree(f) for f in glob.glob(f"{src_path}/**/__pycache__", recursive=True) ] 
